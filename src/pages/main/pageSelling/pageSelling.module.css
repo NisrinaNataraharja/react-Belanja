@@ -1,0 +1,133 @@
+body {
+    background-size: 100vw 100vh;
+    background: #f5f5f5;
+}
+
+.sidebar {
+    height: 100vh;
+    background: #FBFBFB;
+    width: 85%;
+    box-sizing: border-box;
+    padding-left: 150px;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+.side-detail {
+    margin-top: 100px;
+}
+
+.avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar h4 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #222222;
+    margin: 13px 20px 0px 0px;
+}
+
+.detail-left h5 {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 73px;
+    margin-top: 20px;
+    color: #9B9B9B;
+
+}
+
+.detail-mid input {
+    border: 1px solid #9B9B9B;
+    filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.05));
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #222222;
+    margin-bottom: 45px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 48px;
+    width: 348px;
+    border-radius: 4px;
+
+}
+
+.detail-right .avatar-right {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin-left: 100px;
+}
+
+.detail-right button {
+    margin-top: 40px;
+    margin-left: 120px;
+    height: 36px;
+    width: 140px;
+    border: 1px solid #9B9B9B;
+    border-radius: 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #9B9B9B;
+    background: #FFFFFF;
+}
+
+.radiobox {
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 18px;
+    border-radius: 0px;
+
+}
+
+.birth-date input {
+    border: 1px solid #9B9B9B;
+    border-radius: 4px;
+    height: 40px;
+    width: 80px;
+    margin-top: 55px;
+    margin-right: 10px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.save button {
+    background: #DB3022;
+    border-radius: 25px;
+    height: 36px;
+    width: 100px;
+    border-radius: 25px;
+    margin-top: 50px;
+    align-items: center;
+    border: 0;
+    color: #FFFFFF;
+}
+
+.main-form {
+    width:100%;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #9B9B9B;
+    border-radius: 4px;
+    padding: 30px;
+    margin-bottom: 30px;
+}

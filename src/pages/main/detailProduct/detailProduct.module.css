@@ -1,0 +1,164 @@
+.body {
+    padding-bottom: 125px;
+}
+
+.side-detail {
+    box-sizing: border-box;
+}
+
+.side-detail-h4 {
+    font-weight: 600;
+    font-size: 28px;
+    color: #222222;
+}
+
+.h1 {
+    font-size: 34px;
+    line-height: 34px;
+    color: #222222;
+    margin-top: 50px;
+}
+
+.h3 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: #9B9B9B;
+    margin-bottom: 25px;
+}
+
+.h3-s {
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 12px;
+    color: #222222;
+    margin-bottom: 25px;
+    margin-right: 150px;
+}
+
+.card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+}
+
+.card-body h3 {
+    padding: 10px 10px 5px 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    text-align: left;
+}
+
+.card-body h5 {
+    padding: 0px 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #DB3022;
+    text-align: left;
+}
+
+.card-body .brand {
+    padding: 0px 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    color: #9B9B9B;
+    text-align: left;
+}
+
+.card-body .checked {
+    color: #FFBA49;
+}
+
+.rating p {
+    margin-top: -5px;
+    margin-left: 3px;
+}
+
+.rating {
+    padding: 0px 10px 5px 10px;
+}
+
+.checked {
+    color: #FFBA49;
+    height: 15.428570747375488px;
+    width: 16.71428680419922px;
+}
+
+.rate-p {
+    margin-top: -5px;
+    margin-left: 3px;
+}
+
+.price-side {
+    font-weight: 700;
+    font-size: 33px;
+    color: #222222;
+    margin-top: -20px;
+}
+
+.detail-h1 {
+    font-weight: 600;
+    font-size: 28px;
+    color: #222222;
+    margin-bottom: 40px;
+}
+
+.detail-h4 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+.new {
+    font-weight: 500;
+    font-size: 20px;
+    color: #DB3022;
+}
+
+.detail-p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+
+.color h3 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #222222;
+    margin-top: 40px;
+
+}
+
+
+
+.circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background: #D5D5D5;
+    font-size: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.sum {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #222222;
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.count {
+    margin-left: 65px;
+}

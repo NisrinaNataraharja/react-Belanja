@@ -1,0 +1,196 @@
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(115, 115, 115, 0.25);
+    border-radius: 4px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 34px;
+    color: #222222;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.sub-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: #222222;
+    margin-bottom: 25px;
+}
+
+.ship-adress {
+    font-weight: 600;
+    font-size: 16px;
+    color: #222222;
+
+}
+
+.card .card-summary {
+    font-weight: 600;
+    font-size: 16px;
+    color: #222222;
+}
+
+.price {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #9B9B9B;
+
+}
+
+.price span {
+    margin-top: -20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222222;
+
+}
+
+.buy {
+    height: 36px;
+    width: 322px;
+    border-radius: 25px;
+    background: #DB3022;
+    margin-top: 35px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    align-items: center;
+    text-align: center;
+    margin-left: 20%;
+    color: #FFFFFF;
+}
+
+.check {
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    background: #DB3022;
+    margin-right: 23px;
+}
+
+.select {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #222222;
+}
+
+.selected {
+    color: #9B9B9B;
+}
+
+.delete {
+    margin-top: -10px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #DB3022;
+    margin-left: 52%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: end;
+}
+
+.productone-img {
+    width: 103px;
+    height: 69px;
+    border-radius: 8px;
+    margin-right: 11px;
+}
+
+.productone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    margin-top: 20px;
+}
+
+.productone h5 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+}
+
+.productone .brand p {
+    font-weight: 500;
+    font-size: 12px;
+    color: #9B9B9B;
+}
+
+.productone .count-product {
+    display: flex;
+    width: 112px;
+    justify-content: space-between;
+}
+
+.circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background: #D5D5D5;
+    font-size: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.sum {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #222222;
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.productone .price {
+    font-weight: 600;
+    font-size: 16px;
+    color: #222222;
+    margin-top: 1px;
+}
+
+.address-main {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #222222;
+}
+
+.address-p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #222222;
+}
+
+.input-address {
+    border: 1px solid #9B9B9B;
+    border-radius: 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #9B9B9B;
+    height: 36px;
+    width: 210px;
+}
+
+.input-address:focus,
+.input-address:hover,
+.input-address:active {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
