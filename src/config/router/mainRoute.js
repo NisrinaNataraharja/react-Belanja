@@ -8,7 +8,8 @@ import Product from '../../pages/main/detailProduct'
 import MyBag from '../../pages/main/myBag'
 import Checkout from '../../pages/main/checkout'
 import Profile from '../../pages/main/profile'
-
+import RequireAuth from "../../components/Base/RequireAuth";
+import Search from '../../pages/main/Search'
 
 function App() {
     return (
@@ -21,7 +22,8 @@ function App() {
                 <Route path="/detailProduct" element={<Product />} />
                 <Route path="/myBag" element={<MyBag />} />
                 <Route path="/checkout" element={<Checkout />} />
-                <Route path="/profile" element={<Profile />} />
+                <Route path="/searchProduct" element={<Search />} />
+                <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
             </Routes>
         </BrowserRouter>
     );

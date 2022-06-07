@@ -150,3 +150,12 @@
     margin-left: 20%;
     color: #FFFFFF;
 }
+
+.btn-sell{
+    border-radius: 20px;
+    background-color: #DB3022;
+    width: 100px;
+    color: #fff;
+    margin-left: 150px;
+    border: none;
+}

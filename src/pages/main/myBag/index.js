@@ -16,12 +16,12 @@ const MyBag = () => {
                     <div className="col-sm-7 mb-4">
                         <div className={style["card"]}>
                             <div className="card-body p-0 p-4">
-                                <div className="d-flex ">
+                                <div className="d-flex justify-content">
                                     <div className={style["select "]}>
                                         <input className={style["check"]} type="checkbox" />
                                         Select all items <span className={style["selected"]}>(2 items selected)</span>
-                                        <span className={style["delete"]}>Delete</span>
                                     </div>
+                                    <span className={style["delete"]}>Delete</span>
                                 </div>
                             </div>
                         </div>

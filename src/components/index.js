@@ -1,5 +1,6 @@
-import Button from "./Button";
-import Input from "./Input";
-import NavbarBeforeLogin from "./Navbar-before-login";
-import NavbarAfterLogin from "./Navbar-after-login";
-export {Button, Input, NavbarBeforeLogin, NavbarAfterLogin}
+import Button from "./Base/Button";
+import Input from "./Base/Input";
+import NavbarBeforeLogin from "./Base/Navbar-before-login";
+import NavbarAfterLogin from "./Base/Navbar-after-login";
+import Card from "./Base/Card";
+export {Button, Input, NavbarBeforeLogin, NavbarAfterLogin, Card}
