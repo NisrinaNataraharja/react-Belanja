@@ -1,38 +1,39 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavbarBeforeLogin, Card } from '../../../components/index'
-import Jas from '../../../assets/img/jas.png'
+import { NavbarAfterLogin, CardProduct } from '../../../components/index'
+import { getProduct } from '../../../config/redux/actions/productAction'
 import style from '../Home/home.module.css'
-import { getSearchProduct } from '../../../config/redux/actions/productAction'
+import Jas from '../../../assets/img/jas.png'
 
-const Search = () => {
+const myProducts = () => {
   const dispatch = useDispatch()
-  const { searchProduct, querySearch } = useSelector((state) => state.product)
-
+  const { products } = useSelector((state) => state.product)
+  console.log(products);
   useEffect(() => {
-    dispatch(getSearchProduct(querySearch))
+    dispatch(getProduct())
+  }, [])
 
-  }, [querySearch])
-  console.log(querySearch);
+  
   return (
     <>
-      <NavbarBeforeLogin />
+      <NavbarAfterLogin />
       <div className="container">
         <div className={style['contain']}>
-          <h1>Search Result</h1>
-          <h3>Is this what you looking for?</h3>
+          <h1>My Products</h1>
+          <h3>List product here</h3>
         </div>
         <div className="row">
-          {searchProduct.length >= 1 && searchProduct.map((item) => {
+          {products.length >= 1 && products.map((item) => {
             const image = item.image
             const array = JSON.parse(image);
             return (
-              <Card key={item.id}
+              <CardProduct key={item.id}
                 image={array.length > 0 ?
                   array[0] : Jas} alt="jas"
                 nameproduct={item.nameproduct}
                 price={item.price}
                 brand={item.brand}
+                id={item.id}
               />
             )
           })}
@@ -42,4 +43,5 @@ const Search = () => {
   )
 }
 
-export default Search
+
+export default myProducts

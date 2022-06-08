@@ -27,6 +27,11 @@ const productReducer = (state = initialState, action) => {
           ...state,
           querySearch: action.payload,
         };
+        case "DELETE_PRODUCT":
+        return {
+          ...state,
+          querySearch: action.payload,
+        };
       default:
         return state;
     }

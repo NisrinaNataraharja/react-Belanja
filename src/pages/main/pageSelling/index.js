@@ -37,15 +37,7 @@ const pageSelling = () => {
         // formData.append("image", image);
             dispatch(createProduct(formData, navigate))
           }
-    //     axios.post(`${process.env.REACT_APP_URL_API}products/`, formData)
-    //         .then(res => {
-    //             console.log('post success', res);
-    //             navigate("/");
-    //         })
-    //         .catch(err => {
-    //             console.log('err', err);
-    //         })
-    // };
+
 
 
     return (

@@ -159,3 +159,13 @@
     margin-left: 150px;
     border: none;
 }
+
+.btn-delete{
+    border-radius: 20px;
+    background-color: #DB3022;
+    width: 100px;
+    color: #fff;
+    margin-left: 150px;
+    border: none;
+    align-content: center;
+}
