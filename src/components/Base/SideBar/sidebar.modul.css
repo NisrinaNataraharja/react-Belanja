@@ -1,0 +1,46 @@
+.sidebar {
+    height: 100%;
+    background: #FBFBFB;
+    width: 85%;
+    box-sizing: border-box;
+    padding-left: 150px;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+.side-detail {
+    margin-top: 100px;
+}
+
+.avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar h4 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #222222;
+    margin: 13px 20px 0px 0px;
+}
+
+.detail-left h5 {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 73px;
+    margin-top: 20px;
+    color: #9B9B9B;
+
+}

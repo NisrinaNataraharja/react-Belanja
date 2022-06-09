@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import style from './card.module.css'
 import { Button } from '../../../components'
-import {deleteProduct, getProduct} from '../../../config/redux/actions/productAction'
+import {deleteProduct} from '../../../config/redux/actions/productAction'
 
 export default function CardProduct({
     image,
@@ -16,7 +16,6 @@ export default function CardProduct({
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(deleteProduct(id))
-        getProduct()
     }
 
     return (

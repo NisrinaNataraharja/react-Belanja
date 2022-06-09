@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import style from './pageSelling.module.css'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { NavbarAfterLogin } from '../../../components/index'
 import { Button, Input } from '../../../components/index'
@@ -13,19 +13,19 @@ import { createProduct } from '../../../config/redux/actions/productAction'
 const pageSelling = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    // const [image, setImage] = useState('')
+    const [image, setImage] = useState("http://fpoimg.com/200x200?text=Preview")
     const [nameproduct, setNameproduct] = useState('')
     const [price, setPrice] = useState('')
     const [stock, setStock] = useState('')
     const [description, setDeskripsion] = useState('')
-    // const [imgUrl, setImgUrl] = useState(`${process.env.REACT_APP_URL_API}image/${products.image}`);
+    const [imgUrl, setImgUrl] = useState("http://fpoimg.com/200x200?text=Preview");
    
    
-    // const handleImage = (e) => {
-    //     const file = e.target.files[0]
-    //     setImage(file)
-    //     setImgUrl(URL.createObjectURL(file))
-    // }
+    const handleImage = (e) => {
+        const file = e.target.files[0]
+        setImage(file)
+        setImgUrl(URL.createObjectURL(file))
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -34,7 +34,7 @@ const pageSelling = () => {
         formData.append("price", price);
         formData.append("stock", stock);
         formData.append("description", description);
-        // formData.append("image", image);
+        formData.append("image", image);
             dispatch(createProduct(formData, navigate))
           }
 
@@ -54,7 +54,7 @@ const pageSelling = () => {
                                 </div>
                                 <div className={style["side-detail"]}>
                                     <h4>Store</h4>
-                                    <h4>Product</h4>
+                                    <h4 onClick={()=>navigate("/myProducts")}>My Product</h4>
                                     <h4>Order</h4>
                                 </div>
                             </div>
@@ -94,14 +94,14 @@ const pageSelling = () => {
                                             <hr />
                                             <div className="col-sm-3 ms-2 mt-3">
                                                 <div className="card card-image">
-                                                    <img src={Box} alt="Product-img" className="img-fluid " />
+                                                    <img src={imgUrl} alt="Product-img" className="img-fluid " />
                                                     <div className="card-img-overlay text-white d-flex justify-content-center align-items-center">
                                                         <img src="../image/seling-product/box 5.png" alt="" />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="text-center mt-5">
-                                                {/* <input className="form-control btn btn-upload" type="file" accept="image/*" onChange={(e) => handleImage(e)} /> */}
+                                                <input className="form-control btn btn-upload" type="file" accept="image/*" onChange={(e) => handleImage(e)} />
                                             </div>
                                         </section>
                                     </div>

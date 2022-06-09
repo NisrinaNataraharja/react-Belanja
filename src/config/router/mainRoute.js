@@ -11,6 +11,7 @@ import Profile from '../../pages/main/profile'
 import RequireAuth from "../../components/Base/RequireAuth";
 import Search from '../../pages/main/Search'
 import MyProducts from '../../pages/main/Myproducts/myProducts'
+import UpdateProduct from "../../pages/main/Myproducts/updateProduct";
 
 function App() {
     return (
@@ -24,8 +25,8 @@ function App() {
                 <Route path="/myBag" element={<MyBag />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/searchProduct" element={<Search />} />
-                <Route path="/searchProduct" element={<Search />} />
                 <Route path="/myProducts" element={<MyProducts />} />
+                <Route path="/updateProduct" element={<UpdateProduct />} />
                 <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
             </Routes>
         </BrowserRouter>

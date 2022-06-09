@@ -1,5 +1,6 @@
 const initialState = {
     products: [],
+    productsId: [],
     searchProduct: [],
     querySearch: ''
 
@@ -22,19 +23,24 @@ const productReducer = (state = initialState, action) => {
           ...state,
           querySearch: action.payload,
         };
-        case "CREATE_PRODUCT":
+        case "GET_PRODUCT_ID":
+          return {
+            ...state,
+            productsId: action.payload,
+          };
+        // case "CREATE_PRODUCT":
+        // return {
+        //   ...state,
+        //   products: action.payload,
+        // };
+        case "UPDATE_PRODUCT":
         return {
           ...state,
-          querySearch: action.payload,
-        };
-        case "DELETE_PRODUCT":
-        return {
-          ...state,
-          querySearch: action.payload,
+          products: action.payload,
         };
       default:
         return state;
     }
   };
-  
+ 
   export default productReducer;

@@ -194,3 +194,8 @@
     box-shadow: none;
     outline: none;
 }
+
+.main{
+    background-color: #FFFFFF !important;
+    color: #FFFFFF !important;
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Input, Button } from '../../index'
 import style from './navbar.module.css'
 import Belanja from '../../../assets/img/blanja.png'
@@ -7,17 +7,27 @@ import Sort from '../../../assets/img/sort_icon.png'
 import Search from '../../../assets/img/Search.png'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import {getSearchProduct} from '../../../config/redux/actions/productAction'
 
 const NavbarBeforeLogin = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    // const [search, setSearch] = useState('')
+
+    // const handleSearch = (e) => {
+    //    e.preventDefault()
+    //    dispatch(getSearchProduct(search))
+    //    setSearch('')
+    //    navigate('/searchProduct')
+       
+    // }
     const handleSearch =(e)=>{
-        dispatch({
-            type:'QUERY_SEARCH',
-            payload: e.target.value
-        })
+        // dispatch({
+        //     type:'QUERY_SEARCH',
+        //     payload: e.target.value
+        // })
         if (e.target.value.length > 0) {
-            navigate('/searchProduct')
+            navigate(`/searchProduct?search=${e.target.value}`)
         }
 
     }
@@ -41,7 +51,7 @@ const NavbarBeforeLogin = () => {
                                     <form className="d-flex" role="search">
                                         <div className={style['inputSearch']}>
                                             <Input className={[["me-2 "], style["form-control"]].join(" ")} type="search" placeholder="  Search" aria-label="Search"
-                                            onKeyUp={(e)=>handleSearch(e)} />
+                                            onClick={(e)=>handleSearch(e)} />
                                             <img className={style['inputSearch-img']} src={Search} alt="search" />
                                         </div>
                                     </form>
