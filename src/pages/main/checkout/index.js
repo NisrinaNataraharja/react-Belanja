@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import style from '../myBag/myBag.module.css'
 import Jas from '../../../assets/img/jas.png'
-import { Button, NavbarAfterLogin, Input } from '../../../components/index'
+import { Button, NavbarAfterLogin } from '../../../components/index'
 
 const Checkout = () => {
     const navigate = useNavigate()

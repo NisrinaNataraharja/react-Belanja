@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import style from './myBag.module.css'
-import { Button, Input } from '../../../components/index'
+import { Button } from '../../../components/index'
 import { NavbarAfterLogin } from '../../../components/index'
 import Jas from '../../../assets/img/jas.png'
 

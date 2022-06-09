@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom'
 import { NavbarAfterLogin } from '../../../components/index'
 import { Button, Input } from '../../../components/index'
 import Levi from '../../../assets/img/levi2.jpg'
-import Box from '../../../assets/img/boxProduct.png'
-import axios from "axios";
 import { createProduct } from '../../../config/redux/actions/productAction'
 
 
@@ -53,7 +51,7 @@ const pageSelling = () => {
                                     <h4>Levi Ackerman</h4>
                                 </div>
                                 <div className={style["side-detail"]}>
-                                    <h4>Store</h4>
+                                    <h4 onClick={()=>navigate("/pageSelling")}>Store</h4>
                                     <h4 onClick={()=>navigate("/myProducts")}>My Product</h4>
                                     <h4>Order</h4>
                                 </div>

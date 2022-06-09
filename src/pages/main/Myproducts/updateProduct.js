@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavbarAfterLogin, CardProduct } from '../../../components/index'
-import { getProduct } from '../../../config/redux/actions/productAction'
+import { NavbarAfterLogin } from '../../../components/index'
 import style from '../pageSelling/pageSelling.module.css'
-import { useNavigate, Link, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Button, Input } from '../../../components/index'
 import Levi from '../../../assets/img/levi2.jpg'
 import { updateProduct} from '../../../config/redux/actions/productAction'
@@ -53,7 +52,7 @@ const updateProducts = () => {
                     <h4>Levi Ackerman</h4>
                   </div>
                   <div className={style["side-detail"]}>
-                    <h4>Store</h4>
+                    <h4 onClick={()=>navigate("/pageSelling")}>Store</h4>
                     <h4 onClick={() => navigate("/myProducts")}>My Product</h4>
                     <h4>Order</h4>
                   </div>

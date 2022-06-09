@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import style from '../Login/login.module.css'
 import Belanja from '../../../assets/img/blanja.png'
 import { Button, Input } from '../../../components/index'
-import axios from 'axios'
+
 
 function Register() {
   const navigate = useNavigate()

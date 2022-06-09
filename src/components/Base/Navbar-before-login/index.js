@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Input, Button } from '../../index'
 import style from './navbar.module.css'
 import Belanja from '../../../assets/img/blanja.png'
@@ -6,12 +6,12 @@ import Cart from '../../../assets/img/shopping-cart.png'
 import Sort from '../../../assets/img/sort_icon.png'
 import Search from '../../../assets/img/Search.png'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import {getSearchProduct} from '../../../config/redux/actions/productAction'
+
+
 
 const NavbarBeforeLogin = () => {
     const navigate = useNavigate()
-    const dispatch = useDispatch()
+   
     // const [search, setSearch] = useState('')
 
     // const handleSearch = (e) => {
