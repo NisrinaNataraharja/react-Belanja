@@ -50,7 +50,7 @@ const NavbarBeforeLogin = () => {
                                 <div className="d-flex">
                                     <form className="d-flex" role="search">
                                         <div className={style['inputSearch']}>
-                                            <Input className={[["me-2 "], style["form-control"]].join(" ")} type="search" placeholder="  Search" aria-label="Search"
+                                            <Input className='me-2 form-control' css='input-search' type="search" placeholder="  Search" aria-label="Search"
                                             onClick={(e)=>handleSearch(e)} />
                                             <img className={style['inputSearch-img']} src={Search} alt="search" />
                                         </div>

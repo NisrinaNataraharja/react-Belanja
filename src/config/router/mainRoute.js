@@ -20,13 +20,13 @@ function App() {
                 <Route exact path="/" element={<Home/>}/>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/pageSelling" element={<PageSelling />} />
-                <Route path="/detailProduct" element={<Product />} />
-                <Route path="/myBag" element={<MyBag />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/searchProduct" element={<Search />} />
-                <Route path="/myProducts" element={<MyProducts />} />
-                <Route path="/updateProduct" element={<UpdateProduct />} />
+                <Route path="/pageSelling" element={<RequireAuth><PageSelling /></RequireAuth>} />
+                <Route path="/detailProduct" element={<Product/>} />
+                <Route path="/myBag" element={<RequireAuth><MyBag /></RequireAuth>} />
+                <Route path="/checkout" element={<RequireAuth><Checkout /></RequireAuth>} />
+                <Route path="/searchProduct" element={<Search/>} />
+                <Route path="/myProducts" element={<RequireAuth><MyProducts /></RequireAuth>} />
+                <Route path="/updateProduct" element={<RequireAuth><UpdateProduct /></RequireAuth>} />
                 <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
             </Routes>
         </BrowserRouter>
