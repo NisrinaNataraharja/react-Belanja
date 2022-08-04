@@ -41,6 +41,14 @@
 
 }
 
+.del {
+    font-weight: 500;
+    font-size: 16px;
+    color: #DB3022;
+    cursor: pointer;
+
+}
+
 .price span {
     margin-top: -20px;
     font-weight: 500;
@@ -77,12 +85,13 @@
 .select {
     font-weight: 500;
     font-size: 16px;
-    line-height: 16px;
+    margin-top: 6px;
     color: #222222;
 }
 
 .selected {
     color: #9B9B9B;
+    margin-top: 2px;
 }
 
 .delete {

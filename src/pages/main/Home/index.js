@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { NavbarBeforeLogin, Card } from '../../../components/index'
 import { getProduct } from '../../../config/redux/actions/productAction'
 import style from './home.module.css'
@@ -9,8 +10,13 @@ import Jas from '../../../assets/img/jas.png'
 
 const Home = () => {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const { products } = useSelector((state) => state.product)
     console.log(products);
+    const clickDetail =(id)=> {
+        navigate(`/detailProduct/${id}`);
+    }
+    
     // const [data, setData] = useState(products)
     useEffect(() => {
         dispatch(getProduct())
@@ -37,14 +43,14 @@ const Home = () => {
                 </div>
                 <div className="row">
                     {products.length >= 1 && products.map((item) => {
-                        const image = item.image
-                        const array = JSON.parse(image);
+                        // const image = item.image
+                        // const array = JSON.parse(image);
                         // console.log(array[0]);
                         return (
                             <Card key={item.id}
-                                image={array.length > 0 ?
-                                    array[0] : Jas} alt="jas"
-                                nameproduct={item.nameproduct}
+                                image={item.image ? item.image : Jas} alt="jas"
+                                click={()=>clickDetail(item.id)}
+                                nameproduct={item.nameproduct} 
                                 price={item.price}
                                 brand={item.brand}
                             />

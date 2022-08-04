@@ -26,7 +26,7 @@ export const getProductById = (id) => async (dispatch) => {
     try {
         const result = await axios.get(`${process.env.REACT_APP_URL_API}products/${id}`)
         // console.log(result.data);
-        const products = result.data.data
+        const products = result.data.data[0]
         dispatch({ type: "GET_PRODUCT_ID", payload: products })
         console.log(products);
     } catch (error) {

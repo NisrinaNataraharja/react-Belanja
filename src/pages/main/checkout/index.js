@@ -63,7 +63,7 @@ const Checkout = () => {
                                     <h5 className={style["price"]}>Order<span className="d-flex justify-content-end">$ 40.0</span></h5>
                                     <h5 className={style["price"]}>Delivery<span className="d-flex justify-content-end">$ 5.0</span></h5>
                                     <h3 className={[["mt-5"], style["card-summary"]].join(" ")}><hr /> Shopping summary <span className="d-flex justify-content-end">$ 45.0</span></h3>
-                                    <Button onClick={() => navigate('/checkout')} title='Select Payment' btn='btn-buy' />
+                                    <Button onClick={() => navigate('/checkout')} title='Select Payment' btn='btn-buyNew' />
                                 </div>
                             </div>
                         </div>

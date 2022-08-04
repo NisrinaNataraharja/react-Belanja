@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './card.module.css'
+import Star from '../../../assets/img/Star.png'
 
 export default function Card({
     image,
@@ -7,6 +8,7 @@ export default function Card({
     price,
     brand,
     Key,
+    click
 }) {
     return (
         <>
@@ -16,11 +18,15 @@ export default function Card({
                         <div className={style["img-div"]}>
                             <img className={style['imgproduct']} src={image} alt="jas" />
                         </div>
-                        <h3 className={style["card-title"]}>{nameproduct}</h3>
+                        <h3 className={style["card-title"]} onClick={click}>{nameproduct}</h3>
                         <h5 className={style["price"]}>Rp. {price}</h5>
                         <p className={style["brand"]}>{brand}</p>
                         <div className={style["rating"]}>
-                            
+                            <img src={Star} className={style["checked"]} />
+                            <img src={Star} className={style["checked"]} />
+                            <img src={Star} className={style["checked"]} />
+                            <img src={Star} className={style["checked"]} />
+                            <img src={Star} className={style["checked"]} />
                         </div>
                     </div>
                 </div>
