@@ -5,7 +5,7 @@ import { Button } from '../../../components/index'
 import { NavbarAfterLogin } from '../../../components/index'
 import { getCart } from '../../../config/redux/actions/cartAction'
 import { useDispatch, useSelector } from "react-redux";
-import Jas from '../../../assets/img/jas.png'
+import { FormatRupiah } from "@arismun/format-rupiah";
 import axios from 'axios'
 
 const MyBag = () => {
@@ -22,7 +22,7 @@ const MyBag = () => {
 
     const deleteCart = async (cartId) => {
         try {
-            await axios.delete(`${process.env.REACT_APP_URL_API}cart/${cartId}`, {
+            await axios.delete(`${process.env.REACT_APP_URL_API_HEROKU}cart/${cartId}`, {
                 "content-type": "multipart/form-data",
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -67,7 +67,7 @@ const MyBag = () => {
                                             <div className={style["productone"]}>
                                                 <div className="d-flex align-items-center">
                                                     <input className={style["check"]} type="checkbox" />
-                                                    <img className={style["productone-img"]} src={item.image ? item.image : Jas} alt="suite" />
+                                                    <img className={style["productone-img"]} src={item.image} alt="suite" />
                                                     <div className={style["brand"]}>
                                                         <h5>{item.nameproduct}</h5>
                                                         <p>{item.brand}</p>
@@ -78,7 +78,7 @@ const MyBag = () => {
                                                     <p className={style["sum"]}>1</p>
                                                     <div className={style["circle"]}>+</div>
                                                 </div>
-                                                <p className={style["price"]}>Rp. {item.price}</p>
+                                                <p className={style["price"]}>{<FormatRupiah value={item.price} />}</p>
                                                 <p className={style["del"]} onClick={() => deleteCart(item.cartId)} > Delete</p>
                                         </div>
                                     </div>
@@ -113,7 +113,7 @@ const MyBag = () => {
                         <div className={style["card"]}>
                             <div className="card-body-right p-4">
                                 <h3 className={style["card-summary"]}>Shopping summary</h3>
-                                <h5 className={style["price"]}>Total price<span className="d-flex justify-content-end">{`Rp. ` + (sumPrice)}</span></h5>
+                                <h5 className={style["price"]}>Total price<span className="d-flex justify-content-end">{<FormatRupiah value={(sumPrice)} />}</span></h5>
                                 <Button onClick={() => navigate('/checkout')} title='Buy' btn='btn-buyNew' />
                             </div>
                         </div>

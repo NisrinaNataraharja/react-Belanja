@@ -19,7 +19,7 @@ export default function Card({
                             <img className={style['imgproduct']} src={image} alt="jas" />
                         </div>
                         <h3 className={style["card-title"]} onClick={click}>{nameproduct}</h3>
-                        <h5 className={style["price"]}>Rp. {price}</h5>
+                        <h5 className={style["price"]}>{price}</h5>
                         <p className={style["brand"]}>{brand}</p>
                         <div className={style["rating"]}>
                             <img src={Star} className={style["checked"]} />

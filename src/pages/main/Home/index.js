@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { NavbarBeforeLogin, Card } from '../../../components/index'
+import { NavbarBeforeLogin, Card, NavbarAfterLogin } from '../../../components/index'
 import { getProduct } from '../../../config/redux/actions/productAction'
 import style from './home.module.css'
 import Jas from '../../../assets/img/jas.png'
+import { FormatRupiah } from "@arismun/format-rupiah";
 // import axios from 'axios'
 
 
@@ -13,29 +14,20 @@ const Home = () => {
     const navigate = useNavigate()
     const { products } = useSelector((state) => state.product)
     console.log(products);
+    const token = localStorage.getItem("token")
     const clickDetail =(id)=> {
         navigate(`/detailProduct/${id}`);
     }
-    
-    // const [data, setData] = useState(products)
+
     useEffect(() => {
         dispatch(getProduct())
     }, [])
 
-    // useEffect(() => {
-    //     const url = `${process.env.REACT_APP_URL_API}products/`
-    //     axios.get(url)
-    //         .then(function (response) {
-    //             setData(response.data.data);
-    //         })
-    //         .catch(function (error) {
-    //             console.log(error);
-    //         });
-    // }, [])
 
     return (
         <div className={style['main']}>
-            <NavbarBeforeLogin />
+            {token ? <NavbarAfterLogin/> :  <NavbarBeforeLogin />}
+            
             <div className="container">
                 <div className={style['contain']}>
                     <h1>New</h1>
@@ -51,7 +43,7 @@ const Home = () => {
                                 image={item.image ? item.image : Jas} alt="jas"
                                 click={()=>clickDetail(item.id)}
                                 nameproduct={item.nameproduct} 
-                                price={item.price}
+                                price={<FormatRupiah value={item.price} />}
                                 brand={item.brand}
                             />
                         )

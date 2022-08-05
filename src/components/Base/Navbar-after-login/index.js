@@ -14,6 +14,11 @@ import Search from '../../../assets/img/Search.png'
 
 const NavbarAfterLogin  = () => {
     const navigate = useNavigate()
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("refreshToken")
+        navigate("/login");
+      };
     return (
         <>
             <nav className="navbar-expand-lg ">
@@ -45,6 +50,7 @@ const NavbarAfterLogin  = () => {
                                     <img className={style['bell']} src={Bell} onClick={() => navigate('/myBag')} />
                                     <img className={style['mail']} src={Mail} onClick={() => navigate('/myBag')} />
                                     <img className={style['avatar']} src={Avatar} onClick={() => navigate('/profile')} />
+                                    <Button btn='btn-login-nav' title='Logout' onClick={() => handleLogout()} />
                                 </div>
                             </div>
                         </div>
