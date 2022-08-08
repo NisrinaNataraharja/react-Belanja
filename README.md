@@ -1,6 +1,6 @@
 <p align="center">
 
-  <h3 align="center">Food Recipes</h3>
+  <h3 align="center">Blanja</h3>
   <p align="center">
     <image align="center" width="100" src='' />
   </p>
