@@ -2,7 +2,7 @@
 
   <h3 align="center">Blanja</h3>
   <p align="center">
-    <image align="center" width="100" src='./public/ss/Logo.PNG' />
+    <image align="center" width="100px" height="100px" src='./public/ss/Logo.PNG' />
   </p>
 
 ---
