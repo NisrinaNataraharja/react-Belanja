@@ -2,11 +2,12 @@ import React, { useEffect } from 'react'
 import style from './detailProduct.module.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavbarBeforeLogin, Button } from '../../../components/index'
+import { NavbarBeforeLogin, Button, NavbarAfterLogin } from '../../../components/index'
 import { getProductById } from '../../../config/redux/actions/productAction'
 import {addCart} from '../../../config/redux/actions/cartAction'
 import Sepatuak from '../../../assets/img/cruzrone-shoe-atas-kiri.png'
 import Star from '../../../assets/img/Star.png'
+import { FormatRupiah } from "@arismun/format-rupiah";
 
 
 const DetailProduct = () => {
@@ -14,6 +15,7 @@ const DetailProduct = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const token = localStorage.getItem("token")
     const { productsId } = useSelector((state) => state.product)
     // console.log(productsId);
 
@@ -31,7 +33,7 @@ const DetailProduct = () => {
     }, []);
     return (
         <>
-            <NavbarBeforeLogin />
+            {token ? <NavbarAfterLogin/> :  <NavbarBeforeLogin />}
             <div className="container mt-5">
                 {/* <h3 className={style["h3"]}>Home  category  Shoes</h3> */}
                 <div className="row">
@@ -73,7 +75,7 @@ const DetailProduct = () => {
                             </div>
                             <div>
                                 <h3 className={style["h3"]}>Price</h3>
-                                <p className={style["price-side"]}>Rp. {productsId.price ? productsId.price : 0}</p>
+                                <p className={style["price-side"]}>{<FormatRupiah value={productsId.price} />}</p>
                             </div>
                             <div className={style["color"]}>
                                 <h3 className={style["h3"]}>Color</h3>

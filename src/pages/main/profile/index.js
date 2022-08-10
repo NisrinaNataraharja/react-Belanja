@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import style from '../pageSelling/pageSelling.module.css'
 import {NavbarAfterLogin} from '../../../components/index'
-import Levi from '../../../assets/img/levi2.jpg'
+import Levi from '../../../assets/img/photo.jpeg'
+import Acc from '../../../assets/img/myacc.png'
+import Order from '../../../assets/img/myorder.png'
+import Loc from '../../../assets/img/map-icon.png'
 import { Button } from '../../../components/index'
 import axios from 'axios'
 
@@ -33,9 +36,15 @@ const Profile = () => {
                     <h4 className='me-5 pe-5 pt-2'>{profile.name}</h4>
                 </div>
                 <div className={style["side-detail"]}>
-                    <h4>My account</h4>
-                    <h4>Shipping Adress</h4>
-                    <h4>My order</h4>
+                    <div className='d-flex'>
+                    <img src={Acc} alt='acc' className='mt-2'></img><h4 className='ms-3'>My account</h4>
+                    </div>
+                    <div className='d-flex'>
+                    <img src={Loc} alt='acc' className='mt-2'></img><h4 className='ms-3'>Shipping Adress</h4>
+                    </div>
+                    <div className='d-flex'>
+                    <img src={Order} alt='acc' className='mt-2'></img><h4 className='ms-3'>My order</h4>
+                    </div> 
                 </div>
             </div>
         </div>

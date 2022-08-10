@@ -1,10 +1,13 @@
-import React, { useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavbarAfterLogin } from '../../../components/index'
 import { getProduct } from '../../../config/redux/actions/productAction'
 import style from '../pageSelling/pageSelling.module.css'
 import { useNavigate } from 'react-router-dom'
-import Levi from '../../../assets/img/levi2.jpg'
+import Levi from '../../../assets/img/avatar_icon.png'
+import home from '../../../assets/img/home.png'
+import product from '../../../assets/img/product.PNG'
+import order from '../../../assets/img/cart.PNG'
 import { deleteProduct, getProductById } from '../../../config/redux/actions/productAction'
 
 
@@ -22,16 +25,16 @@ const myProducts = () => {
     e.preventDefault();
     // console.log(id);
     dispatch(deleteProduct(id))
-    .then(()=> dispatch(getProduct()))
+      .then(() => dispatch(getProduct()))
   }
 
-  const handleEdit = (e, id) =>{
+  const handleEdit = (e, id) => {
     e.preventDefault();
-  // console.log(id);
-   dispatch(getProductById(id))
-   .then(()=> navigate("/updateProduct") )
+    // console.log(id);
+    dispatch(getProductById(id))
+      .then(() => navigate("/updateProduct"))
   }
-  
+
 
   return (
     <>
@@ -43,12 +46,18 @@ const myProducts = () => {
               <div className={style["sidebar"]}>
                 <div className={style["name"]}>
                   <img className={style['avatar']} src={Levi} alt="avatar" />
-                  <h4>Levi Ackerman</h4>
+                  <h4 className='me-5 pe-4 pt-2'>Uniq Shop</h4>
                 </div>
                 <div className={style["side-detail"]}>
-                  <h4 onClick={()=>navigate("/pageSelling")}>Store</h4>
-                  <h4 onClick={() => navigate("/myProducts")}>My Product</h4>
-                  <h4>Order</h4>
+                  <div className='d-flex'>
+                    <img src={home} alt='acc'></img><h4 className='ms-3' onClick={() => navigate("/pageSelling")}>Store</h4>
+                  </div>
+                  <div className='d-flex'>
+                    <img src={product} alt='acc'></img><h4 className='ms-3' onClick={() => navigate("/myProducts")}>My Product</h4>
+                  </div>
+                  <div className='d-flex'>
+                    <img src={order} alt='acc'></img><h4 className='ms-3'>Order</h4>
+                  </div>
                 </div>
               </div>
             </div>

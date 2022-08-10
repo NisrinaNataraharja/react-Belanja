@@ -6,7 +6,7 @@ import Belanja from '../../../assets/img/blanja.png'
 import Cart from '../../../assets/img/shopping-cart.png'
 import Bell from '../../../assets/img/bell.png'
 import Sort from '../../../assets/img/sort_icon.png'
-import Avatar from '../../../assets/img/levi2.jpg'
+import Avatar from '../../../assets/img/photo.jpeg'
 import Mail from '../../../assets/img/mail.png'
 import Search from '../../../assets/img/Search.png'
 

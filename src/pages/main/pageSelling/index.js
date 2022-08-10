@@ -4,7 +4,10 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { NavbarAfterLogin } from '../../../components/index'
 import { Button, Input } from '../../../components/index'
-import Levi from '../../../assets/img/levi2.jpg'
+import Levi from '../../../assets/img/avatar_icon.png'
+import home from '../../../assets/img/home.png'
+import product from '../../../assets/img/product.PNG'
+import order from '../../../assets/img/cart.PNG'
 import { createProduct } from '../../../config/redux/actions/productAction'
 
 
@@ -17,8 +20,8 @@ const pageSelling = () => {
     const [stock, setStock] = useState('')
     const [description, setDeskripsion] = useState('')
     const [imgUrl, setImgUrl] = useState("http://fpoimg.com/200x200?text=Preview");
-   
-   
+
+
     const handleImage = (e) => {
         const file = e.target.files[0]
         setImage(file)
@@ -33,8 +36,8 @@ const pageSelling = () => {
         formData.append("stock", stock);
         formData.append("description", description);
         formData.append("image", image);
-            dispatch(createProduct(formData, navigate))
-          }
+        dispatch(createProduct(formData, navigate))
+    }
 
 
 
@@ -48,12 +51,18 @@ const pageSelling = () => {
                             <div className={style["sidebar"]}>
                                 <div className={style["name"]}>
                                     <img className={style['avatar']} src={Levi} alt="avatar" />
-                                    <h4>Levi Ackerman</h4>
+                                    <h4 className='me-5 pe-4 pt-2'>Uniq Shop</h4>
                                 </div>
                                 <div className={style["side-detail"]}>
-                                    <h4 onClick={()=>navigate("/pageSelling")}>Store</h4>
-                                    <h4 onClick={()=>navigate("/myProducts")}>My Product</h4>
-                                    <h4>Order</h4>
+                                    <div className='d-flex'>
+                                        <img src={home} alt='acc'></img><h4 className='ms-3' onClick={() => navigate("/pageSelling")}>Store</h4>
+                                    </div>
+                                    <div className='d-flex'>
+                                        <img src={product} alt='acc'></img><h4 className='ms-3' onClick={() => navigate("/myProducts")}>My Product</h4>
+                                    </div>
+                                    <div className='d-flex'>
+                                        <img src={order} alt='acc'></img><h4 className='ms-3'>Order</h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
