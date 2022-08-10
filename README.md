@@ -2,7 +2,7 @@
 
   <h3 align="center">Blanja</h3>
   <p align="center">
-    <image align="center" width="100" src='' />
+    <image align="center" width="100" src='./public/assets/ss/Logo.png' />
   </p>
 
 ---
@@ -22,7 +22,7 @@ Blanja is an online shop application that sell products. This application applie
 - Clone This Repo
 
 ```
-git clone https://github.com/NisrinaNataraharja/FE-Food-Recipes.git
+git clone https://github.com/NisrinaNataraharja/react-Belanja.git
 ```
 
 - Go To Folder Repo
@@ -43,23 +43,34 @@ npm install
 
 | Login Page | Register Page |
 | ------------- | ------------- |
-| ![Login]( "Login Page") | ![Register]( "Register Page")|
+| ![Login](/public/assets/ss/login.png?raw=true "Login Page") | ![Register](/public/assets/ss/register.png?raw=true "Register Page")|
 
-| Home Page  | Search Page |
+| Home Page  | Bag Page |
 | ------------- | ------------- |
-| ![Landing]( "Landing Page") | ![Search Page]( "Recipe Detail Page") |
+| ![Landing](/public/assets/ss/home.png?raw=true "Landing Page") | ![Search Page](/public/assets/ss/bag.png?raw=true "My Bag Page") |
 
-| Profile Page | My Bag |
+| Checkout | Detail Page |
 | ------------- | ------------- |
-| ![Profile]( "Profile Page") | ![Add Recipe]( "Add Recipe Page") |
+| ![Checkout](/public/assets/ss/checkout.png?raw=true "Checkout Page") | ![Detail](/public/assets/ss/detailProduct.png?raw=true "Profile Page") |
 
-| Checkout | Sell Product |
+| Profile Page | Selling Product |
 | ------------- | ------------- |
-| ![Profile]( "Profile Page") | ![Add Recipe]( "Add Recipe Page") |
+| ![Profile](/public/assets/ss/profile.png?raw=true "Profile Page") | ![Sell Product](/public/assets/ss/pageSelling.png?raw=true "Sell Product") |
 
 | My Product | 
 | ------------- |
-| ![Profile]( "Profile Page") |
+| ![My Product](/public/assets/ss/myProducts.png?raw=true "My Product Page") |
+
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 
 ## ✍️ Authors
