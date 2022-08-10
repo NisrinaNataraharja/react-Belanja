@@ -2,7 +2,7 @@
 
   <h3 align="center">Blanja</h3>
   <p align="center">
-    <image align="center" width="100" src='./public/assets/ss/Logo.png' />
+    <image align="center" width="100" src='./public/ss/Logo.png' />
   </p>
 
 ---
@@ -43,23 +43,23 @@ npm install
 
 | Login Page | Register Page |
 | ------------- | ------------- |
-| ![Login](/public/assets/ss/login.png?raw=true "Login Page") | ![Register](/public/assets/ss/register.png?raw=true "Register Page")|
+| ![Login](/public/ss/login.png?raw=true "Login Page") | ![Register](/public/ss/register.png?raw=true "Register Page")|
 
 | Home Page  | Bag Page |
 | ------------- | ------------- |
-| ![Landing](/public/assets/ss/home.png?raw=true "Landing Page") | ![Search Page](/public/assets/ss/bag.png?raw=true "My Bag Page") |
+| ![Landing](/public/ss/home.png?raw=true "Landing Page") | ![Search Page](/public/ss/bag.png?raw=true "My Bag Page") |
 
 | Checkout | Detail Page |
 | ------------- | ------------- |
-| ![Checkout](/public/assets/ss/checkout.png?raw=true "Checkout Page") | ![Detail](/public/assets/ss/detailProduct.png?raw=true "Profile Page") |
+| ![Checkout](/public/ss/checkout.png?raw=true "Checkout Page") | ![Detail](/public/ss/detailProduct.png?raw=true "Profile Page") |
 
 | Profile Page | Selling Product |
 | ------------- | ------------- |
-| ![Profile](/public/assets/ss/profile.png?raw=true "Profile Page") | ![Sell Product](/public/assets/ss/pageSelling.png?raw=true "Sell Product") |
+| ![Profile](/public/ss/profile.png?raw=true "Profile Page") | ![Sell Product](/public/ss/pageSelling.png?raw=true "Sell Product") |
 
 | My Product | 
 | ------------- |
-| ![My Product](/public/assets/ss/myProducts.png?raw=true "My Product Page") |
+| ![My Product](/public/ss/myProducts.png?raw=true "My Product Page") |
 
 
 ## Contributing
